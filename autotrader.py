@@ -25,7 +25,9 @@ MODEL_REQ_URL = 'http://www.kbb.com/jsdata/3.1.85.2_53460/_modelsyears?\
         priceMax=&categoryId=0&includeDefaultVehicleId=false&\
         includeTrims=false&hasNCBBPrice=false'
 
-make = raw_input('Enter car make: ').title()
+make = raw_input('Enter car make: ')
+if make != make.upper():
+    make = make.title()
 
 if make in CAR_DICT:
     makeid = CAR_DICT[make]
